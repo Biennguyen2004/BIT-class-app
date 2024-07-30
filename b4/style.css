@@ -1,0 +1,19 @@
+nav{
+    background-color: #333;
+    color: white;
+    opacity: 0,8;
+    text-align: center;
+    position: fixed;
+    transition: width 2s;
+    width: 0;
+}
+
+nav ul{
+    color: white;
+    text-decoration: none;
+    list-style-type:none ;
+}
+
+.show{
+    width: 250px;
+}

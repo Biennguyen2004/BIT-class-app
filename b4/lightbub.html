@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Bulb</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body style="text-align: center;">
+    <h1>LightBulb</h1>
+   <p><i id="Light-bulb" style="font-size:24px" class="fa">&#xf0eb;</i></p> 
+  
+    <button style="height: 50; width: 60;"; onclick="changeColor()"; id="btn">
+        Off
+<script>
+    try{
+        let lightbulb = document.getElementById('Light-bulb');
+        lightbulb.style.color = 'red';
+        let btn = document.querySelector('button')
+        let isOn = true;
+        function changeColor(color) {
+            isOn = !isOn
+            if (isOn){
+                lightbulb.style.color = 'red';
+                btn.textContent = 'On'; 
+                btn.style.backgroundColor ='green'
+            }else{
+                lightbulb.style.color = 'black';
+                btn.textContent = 'Off';  
+                btn.style.backgroundColor ='gray'
+            }
+        } 
+        
+    }catch(error){
+        console.error(error);  // handle any errors here, such as invalid DOM references or other unexpected issues.  For this example, we'll just log them to the console.  In a real-world application, you might want to display an error message to the user.  For example: alert('An error occurred: '+error.message);  // Display an error message to the user.  Note: In a production environment, you'd want to use a logging library like 'console.error' instead of 'alert' to avoid exposing sensitive information.  In this example, we're using 'console.error' for demonstration purposes.  For a production environment, you'd want to replace 'console.error' with a logging library like 'log' or 'error' that sends the error message to your logging service.  Note: In this example, we're using 'console.error' for demonstration purposes.  In a production environment, you'd want   
+    }
+   
+</script>
